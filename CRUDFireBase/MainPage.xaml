@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CRUDFireBase"
+             x:Class="CRUDFireBase.MainPage"
+             Visual="Material">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250">
+        <Label Text="Tasker APP" Margin="0, 50, 0, 0" FontAttributes="Bold" FontSize="50" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+        <Entry x:Name="txtId" Placeholder="NIA"></Entry>
+        <Entry x:Name="txtName" Placeholder="Introduzca los datos del usuario"></Entry>
+        
+        <Button x:Name="btnAdd" WidthRequest="200" Text="Añadir" Clicked="BtnAdd_Clicked" BackgroundColor="DarkMagenta"/>
+        <Button x:Name="btnRetrive" WidthRequest="200" Text="Recuperar" Clicked="BtnRetrive_Clicked" BackgroundColor="DarkMagenta"/>
+        <Button x:Name="btnUpdate" WidthRequest="200" Text="Editar" Clicked="BtnUpdate_Clicked" BackgroundColor="DarkMagenta" />
+        <Button x:Name="btnDelete" WidthRequest="200" Text="Suprimir" Clicked="BtnDelete_Clicked" BackgroundColor="DarkMagenta"/>
+
+        <Label x:Name="EtiquetaUsuarios" Text="Usuarios: "/>
+        <ListView x:Name="lstPersons">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>
