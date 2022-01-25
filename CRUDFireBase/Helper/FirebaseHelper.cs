@@ -12,7 +12,7 @@ namespace CRUDFireBase.Helper
     
     public class FirebaseHelper
     {
-        FirebaseClient firebase = new FirebaseClient("https://pruebawtf-a40cf-default-rtdb.europe-west1.firebasedatabase.app/Persons");
+        FirebaseClient firebase = new FirebaseClient("PON_AQUÍ_LA_URL_DE_VUESTRA_BBDD");
 
         public async Task<List<Person>> GetAllPersons()
         {
